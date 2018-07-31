@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="interiorDesign">
+
+  <head>
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <script src="scripts/lib/jquery-2.1.4.min.js"></script>
+    <script src="scripts/lib/angular.js"></script>
+    <script src="scripts/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
+    <script src="bower_components/angular-slick-carousel/dist/angular-slick.min.js"></script>
+    <script src="scripts/app.js" type="text/javascript"></script>
+    <script src="scripts/lib/angular-fusioncharts.js" type="text/javascript"></script>
+    <script src="scripts/lib/angular-fusioncharts.min.js" type="text/javascript"></script>
+  </head>
+
+  <body ng-controller="ID_Controller">
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Brand</a>
+        </div>
+        <!-- Collection of nav links and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/statistic">Statistic</a></li>
+                <li><a href="/contact-us">Contact Us</a></li>
+                <li><a href="/contact-us">Recent Designs</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/help">What we do</a></li>
+                <li class="active"><a href="/gallery">Gallery</a></li>
+                <li><a href="#">Log In</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section  style="margin-top: 55px !important;">   
+    <div class="container">
+
+      <div class="row text-center text-lg-left" id="galleryDiv">
+        <div class="col-lg-3 col-md-4 col-xs-6 galleryClass tilt" ng-repeat="i in galleryImg">
+          <a href="#" class="">
+            <img class="img-fluid img-thumbnail" src="images/{{i.label}}" alt="Gallery">
+            <div class="middle" id="comment_bubble">
+              <div class="text">Explore</div>
+            </div>
+          </a> 
+        </div> 
+        </div>
+      </div>
+
+    </div>
+</section>
+    <div class="container" ng-include="'/footer'" id="footer_menu"><!-- FOOTER MENU --></div>
+  </body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
+
+
+</html>

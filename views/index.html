@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html ng-app="interiorDesign">
+
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <script src="scripts/lib/jquery-2.1.4.min.js"></script>
+    <script src="scripts/lib/angular.js"></script>
+    <script src="scripts/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
+    <script src="bower_components/angular-slick-carousel/dist/angular-slick.min.js"></script>
+    <script src="scripts/app.js" type="text/javascript"></script>
+    <script src="scripts/lib/angular-fusioncharts.js" type="text/javascript"></script>
+    <script src="scripts/lib/angular-fusioncharts.min.js" type="text/javascript"></script>
+  </head>
+
+  <body ng-controller="ID_Controller">
+      <!-- <div id="preloader" style="background: #17181a url('images/ajax-loader.gif') no-repeat center center;
+    background-size: 55px, 55px;
+    "></div> -->
+<div class="navcont" id="header_menu" ng-include="'/header'"><!-- HEADER MENU--></div>
+
+      <div class="container" style="width: 100% !important;padding: 0px !important;">
+        <slick ng-if="numberLoaded" settings="slickConfig">
+          <div ng-repeat="i in largeSlickImg">
+              <div class="" style="">
+                  <!-- <img ng-src="images/{{ i.label }}" alt="IMAGE"> -->
+                  <div class="slick-image-div" style="opacity: 0.8;background-image: url('images/{{ i.src }}');">
+
+                      <div class="container-64">
+                      <div class="row">
+                      <div class="col-sm-4">
+                        <div class="banner-form pull-right" id="meet-designer-singup">
+                      <div class="img-heading"> <h2 class="heading">Approach Us</h2></div>
+                      <form method="post">
+                      <div class="form-group">
+                      <input type="email" class="form-control" name="log_email" placeholder="Email">
+                      </div>
+                      <div class="form-group btn-block">
+                      <button class="btn btn-scheme-1" type="submit" value="Validate!">Contact Me</button>
+                      </div>
+                      <input type="hidden" value="HP Book Consultation" name="signup_source">
+                      </form>
+                      </div>
+                      </div>
+                      <div class="col-sm-8" style="top: 190px !important;">
+                        <div class="home-banner-content">
+                            <h1 class="title">Beautiful Home Interiors</h1>
+                            <p class="description">Delivered in 45 Days. Or we pay rent.</p>
+                        </div>
+                      <div class="clearfix"></div>
+                      </div>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </slick>
+      </div>
+
+<section class="wel-area wel-area-15" style="margin-top: 90px;">
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+
+      <div class="widget wel-service-1-widget">
+
+        <div class="widget-title widget-title-s5 text-center">
+          <span></span>
+          <h2>Gallery</h2>
+        </div>
+        <!-- widget-title -->
+
+        <div class="widget-content">
+
+          <div class="row">
+
+            <div class="col-sm-4" ng-repeat="gal in gallery">
+              <div class="thumbnail" >
+                <img ng-src="images/{{ gal.img }}" alt="IMAGE">
+                <div class="caption">
+                  <h3>{{gal.text}}</h3>
+                  <p>ullamco laboris nisi ut aliquip ex ea ullamco laboris nisi ut aliquip ex ea ullamco laboris nisi ut aliquip ex ea </p>
+                </div>
+                <button class="btn btn-primary center-block">Explore</button>
+              </div>
+            </div>
+          </div>
+          <!-- row -->
+
+        </div>
+        <!-- widget-content -->
+
+      </div>
+      <!-- widget -->
+
+    </div>
+    <!-- col-md-12 -->
+
+  </div>
+  <!-- row -->
+
+</div>
+<!-- container -->
+</section>
+<section class="wel-area wel-area-15" style="margin-top: 90px;">
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+
+      <div class="widget wel-service-1-widget">
+
+        <div class="widget-title widget-title-s5 text-center">
+          <span></span>
+          <h2>OUR STUDENT'S PROJECT</h2>
+          <p>
+            We are constantly motivating students
+          </p>
+        </div>
+        <!-- widget-title -->
+
+        <div class="widget-content">
+
+          <div class="row">
+
+            <div class="col-sm-3 projectBox_hm" ng-repeat="project in number">
+                <a href="/projects">
+                  <img height="210" src="images/{{project.img}}" class="" alt="Photos arranged on the floor"><h5>{{project.text}}</h5>
+                </a>
+            </div>
+          </div>
+          <!-- row -->
+
+        </div>
+        <!-- widget-content -->
+
+      </div>
+      <!-- widget -->
+
+    </div>
+    <!-- col-md-12 -->
+
+  </div>
+  <!-- row -->
+
+</div>
+<!-- container -->
+</section>
+      
+<section class="wel-area wel-area-15" style="margin-top: 90px;">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-12 col-sm-12 col-xs-12">
+
+        <div class="widget wel-service-1-widget">
+
+          <div class="widget-title widget-title-s5 text-center">
+            <span></span>
+            <h2>OUR BEST FEATURES</h2>
+            <p>
+              ullamco laboris nisi ut aliquip ex ea
+            </p>
+          </div>
+          <!-- widget-title -->
+
+          <div class="widget-content">
+
+            <div class="row">
+
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <span class="boxy-title">
+                  <i class="glyphicon glyphicon-flag pull-left" style="background-color: #F9A61A;width:100%; ">
+                    <a href="#" style="padding: 12px; font: italic normal normal normal 28px / 21px georgia;">Top Ranked</a>
+                  </i>
+                </span>
+                <article class="entry-item clearfix">
+
+                  <div class="entry-content">
+
+                    <p class="boxy-content">
+                       ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <a class="more-link clearfix" href="#" style="display: none">
+                      <span class="pull-left">Read more</span>
+                      <i class="fa fa-angle-right pull-left"></i>
+                    </a>
+                  </div>
+                </article>
+              </div>
+              <!-- col-md-4 -->
+
+              <div class="col-md-4 col-sm-4 col-xs-12">
+
+                <article class="entry-item clearfix">
+                  <span class="boxy-title">
+                    <i class="glyphicon glyphicon-calendar pull-left" style="background-color: #e46a16;width:100%;">
+                      <a href="#" style="padding: 12px; font: italic normal normal normal 28px / 21px georgia;">Lorem ipsum</a>
+                    </i>
+                  </span>
+                  <!--i class="fa fa-mortar-board pull-left" style="background-color: #e46a16"></i-->
+                  <div class="entry-content">
+
+                    <p class="boxy-content">
+                      Lorem ipsum dolor sit amet, consectetur
+
+                      <br> Lorem ipsum dolor sit amet, consectetur adipiscin
+
+                      <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </p>
+                    <a class="more-link clearfix" href="#" style="display: none">
+                      <span class="pull-left">Read more</span>
+                      <i class="fa fa-angle-right pull-left"></i>
+                    </a>
+                  </div>
+                </article>
+              </div>
+              <!-- col-md-4 -->
+
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <span class="boxy-title">
+                  <i class="glyphicon glyphicon-lamp pull-left" style="background-color: #ac3b67;width:100%;">
+                    <a href="#" style="padding: 12px; font: italic normal normal normal 28px / 21px georgia;">Lorem ipsum dolor sit amet</a>
+                  </i>
+                </span>
+                <article class="entry-item clearfix">
+
+                  <div class="entry-content">
+
+                    <p class="boxy-content">
+                      Lorem ipsum dolor sit amet, consectetur.
+                      <br>
+                      <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                    </p>
+                    <br>
+                    <a class="more-link clearfix" href="#" style="display: none">
+                      <span class="pull-left">Read more</span>
+                      <i class="fa fa-angle-right pull-left"></i>
+                    </a>
+                  </div>
+                </article>
+              </div>
+              <!-- col-md-4 -->
+
+            </div>
+            <!-- row -->
+
+          </div>
+          <!-- widget-content -->
+
+        </div>
+        <!-- widget -->
+
+      </div>
+      <!-- col-md-12 -->
+
+    </div>
+    <!-- row -->
+
+  </div>
+  <!-- container -->
+</section>
+
+<div class="container" ng-include="'/footer'" id="footer_menu"><!-- FOOTER MENU --></div>
+
+</body>
+
+
+<script src="scripts/lib//ui-bootstrap.min.js"></script>
+<script src="scripts/lib//ui-bootstrap-tpls.min.js"></script>
+ 
+
+</html>

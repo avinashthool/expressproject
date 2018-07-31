@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html ng-app="mySchoolApp">
+
+  <head>
+    <title>My School Site</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
+    <script src="bower_components/angular-slick-carousel/dist/angular-slick.min.js"></script>
+    <script src="javascripts/app.js" type="text/javascript"></script> <!-- not created yet -->
+  </head>
+
+  <body ng-controller="mySchoolController">
+      
+<div class="navcont" id="header_menu" ng-include="'/header'"><!-- HEADER MENU--></div>
+
+      <div class="container">
+        <slick ng-if="numberLoaded" settings="slickConfig">
+          <div ng-repeat="i in largeSlickImg">
+              <div class="" style="">
+                  <!-- <img ng-src="images/{{ i.label }}" alt="IMAGE"> -->
+                  <div class="slick-image-div" style="opacity: 0.65;background-image: url('images/{{ i.label }}');">
+
+                  <div class="square">
+                     <p>This is sample div box for slide image</p>
+                  </div>
+                  <div class="square-bottom-right">
+                     <p>This is sample div box for slide image</p>
+                  </div>
+                  </div>
+              </div>
+          </div>
+        </slick>
+      </div>
+
+      <section class="wel-area wel-area-15" style="margin-top: 90px;">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-12 col-sm-12 col-xs-12">
+
+            <div class="widget wel-service-1-widget">
+
+              <div class="widget-title widget-title-s5 text-center">
+                <span></span>
+                <h2>Gallery</h2>
+              </div>
+              <!-- widget-title -->
+
+              <div class="widget-content">
+
+                <div class="row">
+
+                  <div class="col-sm-4" ng-repeat="i in number">
+                    <div class="thumbnail" >
+                      <img ng-src="images/{{ i.label }}" alt="IMAGE">
+                      <div class="caption">
+                        <h3>{{i.text}}</h3>
+                        <p>JKNSNKJSFKBKF SBKFBSKFBKB Ksddfsd fsdfsfsff dfsdfdsfsdf sdfsd fsdff sdsdf dfgdg fgdfg fgdg dfgdgd dfgdfgd</p>
+                      </div>
+                      <button class="btn btn-primary center-block">Explore</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- row -->
+
+              </div>
+              <!-- widget-content -->
+
+            </div>
+            <!-- widget -->
+
+          </div>
+          <!-- col-md-12 -->
+
+        </div>
+        <!-- row -->
+
+      </div>
+      <!-- container -->
+    </section>
+      <section class="wel-area wel-area-15" style="margin-top: 90px;">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-12 col-sm-12 col-xs-12">
+
+            <div class="widget wel-service-1-widget">
+
+              <div class="widget-title widget-title-s5 text-center">
+                <span></span>
+                <h2>OUR STUDENT'S PROJECT</h2>
+                <p>
+                  We are constantly motivating students
+                </p>
+              </div>
+              <!-- widget-title -->
+
+              <div class="widget-content">
+
+                <div class="row">
+
+                  <div class="col-sm-3 projectBox_hm">
+                      <a href="#">
+                        <img height="210" src="images/crib-6" class="" alt="Photos arranged on the floor">               <h3>Project 1</h3>
+                      </a>
+                  </div>
+                  <!-- col-md-4 -->
+
+                  
+                  <!-- col-md-4 -->
+
+                  <div class="col-sm-3 projectBox_hm">
+                      <a href="#">
+                        <img height="210" src="images/crib-6" class="" alt="Photos arranged on the floor">               <h3>Project 1</h3>
+                      </a>
+                  </div>
+
+                  <div class="col-sm-3 projectBox_hm">
+                      <a href="#">
+                        <img height="210" src="images/crib-6" class="" alt="Photos arranged on the floor">               <h3>Project 1</h3>
+                      </a>
+                  </div>
+
+                  <div class="col-sm-3 projectBox_hm">
+                      <a href="#">
+                        <img height="210" src="images/crib-6" class="" alt="Photos arranged on the floor">               <h3>Project 1</h3>
+                      </a>
+                  </div>
+                  
+                  <!-- col-md-4 -->
+
+                </div>
+                <!-- row -->
+
+              </div>
+              <!-- widget-content -->
+
+            </div>
+            <!-- widget -->
+
+          </div>
+          <!-- col-md-12 -->
+
+        </div>
+        <!-- row -->
+
+      </div>
+      <!-- container -->
+    </section>
+      
+      <section class="wel-area wel-area-15" style="margin-top: 90px;">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-12 col-sm-12 col-xs-12">
+
+            <div class="widget wel-service-1-widget">
+
+              <div class="widget-title widget-title-s5 text-center">
+                <span></span>
+                <h2>OUR BEST FEATURES</h2>
+                <p>
+                  We are constantly improvising to be at the top
+                </p>
+              </div>
+              <!-- widget-title -->
+
+              <div class="widget-content">
+
+                <div class="row">
+
+                  <div class="col-md-4 col-sm-4 col-xs-12">
+                    <span class="boxy-title">
+                      <i class="glyphicon glyphicon-flag pull-left" style="background-color: #F9A61A;width:100%; ">
+                        <a href="#" style="padding: 12px; font: italic normal normal normal 28px / 21px georgia;">Top Ranked</a>
+                      </i>
+                    </span>
+                    <article class="entry-item clearfix">
+
+                      <div class="entry-content">
+
+                        <p class="boxy-content">
+                          We are ranked No. 45 among the top 100 Engineering Institutions across the country and ranked No. 1 among the Engineering
+                          Institutions under VTU Affiliation, Belagavi as per MHRD, Govt. of India, 2017
+                        </p>
+                        <a class="more-link clearfix" href="#" style="display: none">
+                          <span class="pull-left">Read more</span>
+                          <i class="fa fa-angle-right pull-left"></i>
+                        </a>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- col-md-4 -->
+
+                  <div class="col-md-4 col-sm-4 col-xs-12">
+
+                    <article class="entry-item clearfix">
+                      <span class="boxy-title">
+                        <i class="glyphicon glyphicon-calendar pull-left" style="background-color: #e46a16;width:100%;">
+                          <a href="#" style="padding: 12px; font: italic normal normal normal 28px / 21px georgia;">Industry Collaborations</a>
+                        </i>
+                      </span>
+                      <!--i class="fa fa-mortar-board pull-left" style="background-color: #e46a16"></i-->
+                      <div class="entry-content">
+
+                        <p class="boxy-content">
+                          We are collaborated with 46 Industries so far.
+
+                          <br> We have an average of 350 Publications per year.
+
+                          <br> We have an average of 96% Placement Percentage.
+                        </p>
+                        <a class="more-link clearfix" href="#" style="display: none">
+                          <span class="pull-left">Read more</span>
+                          <i class="fa fa-angle-right pull-left"></i>
+                        </a>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- col-md-4 -->
+
+                  <div class="col-md-4 col-sm-4 col-xs-12">
+                    <span class="boxy-title">
+                      <i class="glyphicon glyphicon-lamp pull-left" style="background-color: #ac3b67;width:100%;">
+                        <a href="#" style="padding: 12px; font: italic normal normal normal 28px / 21px georgia;">NAAC Accreditated with 'A' grade</a>
+                      </i>
+                    </span>
+                    <article class="entry-item clearfix">
+
+                      <div class="entry-content">
+
+                        <p class="boxy-content">
+                          We are accredited by NAAC with 'A' grade.
+                          <br>
+                          <br> All of our academic departments are accredited by NBA under new process.
+                        </p>
+                        <br>
+                        <a class="more-link clearfix" href="#" style="display: none">
+                          <span class="pull-left">Read more</span>
+                          <i class="fa fa-angle-right pull-left"></i>
+                        </a>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- col-md-4 -->
+
+                </div>
+                <!-- row -->
+
+              </div>
+              <!-- widget-content -->
+
+            </div>
+            <!-- widget -->
+
+          </div>
+          <!-- col-md-12 -->
+
+        </div>
+        <!-- row -->
+
+      </div>
+      <!-- container -->
+    </section>
+
+    <section class="mainContent">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-xs-4">
+              <div class="contentIconBg">
+              <p><i class="glyphicon glyphicon-user" style="font-size: 52px;"></i></p>
+              </div>
+              <h3 style="height: 57px;">
+                <a href="#" target="_blank">Admissions</a>
+              </h3>
+            <p>The KIS academic program prepares students for entry into the finest colleges and universities world-wide.</p>
+            </div>
+
+            <div class="col-xs-4">
+              <div class="contentIconBg">
+              <p><i class="glyphicon glyphicon-file" style="font-size: 52px;"></i></p>
+              </div>
+              <h3 style="height: 57px;">
+                <a href="#" target="_blank">Flag</a>
+              </h3>
+            <p>The KIS academic program prepares students for entry into the finest colleges and universities world-wide.</p>
+            </div>
+
+            <div class="col-xs-4">
+              <div class="contentIconBg">
+              <p><i class="glyphicon glyphicon-briefcase" style="font-size: 52px;"></i></p>
+              </div>
+              <h3 style="height: 57px;">
+                <a href="#" target="_blank">Alumni</a>
+              </h3>
+            <p>The KIS academic program prepares students for entry into the finest colleges and universities world-wide.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container" ng-include="'/footer'" id="footer_menu"><!-- FOOTER MENU --></div>
+  </body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
+ 
+
+</html>
