@@ -5,6 +5,7 @@
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="scripts/lib/jquery-2.1.4.min.js"></script>
     <script src="scripts/lib/angular.js"></script>
     <script src="scripts/slick/slick.min.js"></script>
@@ -20,8 +21,39 @@
       <!-- <div id="preloader" style="background: #17181a url('images/ajax-loader.gif') no-repeat center center;
     background-size: 55px, 55px;
     "></div> -->
-<div class="navcont" id="header_menu" ng-include="'/header'"><!-- HEADER MENU--></div>
+ <!-- <div class="navcont" id="header_menu" ng-include="'/header'"> --><!-- HEADER MENU</div> -->
+      <nav id="header_menu_new" class="navbar navbar-custom navbar-fixed-top" role="navigation">
+          <div class="container">
+              <div class="navbar-header page-scroll">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                      <i class="fa fa-bars"></i>
+                  </button>
+                  <a class="navbar-brand" href="index.html">
+                      <h1>SQUAD FREE</h1>
+                  </a>
+              </div>
 
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#contact">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Example menu</a></li>
+              <li><a href="#">Example menu</a></li>
+              <li><a href="#">Example menu</a></li>
+            </ul>
+          </li>
+        </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container -->
+      </nav>
       <div class="container" style="width: 100% !important;padding: 0px !important;">
         <slick ng-if="numberLoaded" settings="slickConfig">
           <div ng-repeat="i in largeSlickImg">
@@ -108,56 +140,11 @@
 </div>
 <!-- container -->
 </section>
-<section class="wel-area wel-area-15" style="margin-top: 90px;">
 
-<div class="container">
-
-  <div class="row">
-
-    <div class="col-md-12 col-sm-12 col-xs-12">
-
-      <div class="widget wel-service-1-widget">
-
-        <div class="widget-title widget-title-s5 text-center">
-          <span></span>
-          <h2>OUR STUDENT'S PROJECT</h2>
-          <p>
-            We are constantly motivating students
-          </p>
-        </div>
-        <!-- widget-title -->
-
-        <div class="widget-content">
-
-          <div class="row">
-
-            <div class="col-sm-3 projectBox_hm" ng-repeat="project in number">
-                <a href="/projects">
-                  <img height="210" src="images/{{project.img}}" class="" alt="Photos arranged on the floor"><h5>{{project.text}}</h5>
-                </a>
-            </div>
-          </div>
-          <!-- row -->
-
-        </div>
-        <!-- widget-content -->
-
-      </div>
-      <!-- widget -->
-
-    </div>
-    <!-- col-md-12 -->
-
-  </div>
-  <!-- row -->
-
-</div>
-<!-- container -->
-</section>
       
 <section class="wel-area wel-area-15" style="margin-top: 90px;">
 
-  <div class="container">
+  <div class="container" id="best_feature">
 
     <div class="row">
 
@@ -271,8 +258,9 @@
   <!-- container -->
 </section>
 
-<div class="container" ng-include="'/footer'" id="footer_menu"><!-- FOOTER MENU --></div>
-
+<section class="footer-menu" id="" ng-include="'/footer'" style="background-image: url('images/footer-background.jpg');">
+  
+</section>
 </body>
 
 

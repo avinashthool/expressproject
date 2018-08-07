@@ -49,15 +49,15 @@ app.config(['slickCarouselConfig', function (slickCarouselConfig) {
     $scope.slickConfig = {
     enabled: true,
     dots:true,
-    //autoplay: true,
+    fade: true,
+    speed: 1000,
+    autoplay: true,
     draggable: false,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 1000,
     arrows: true,
     method: {},
-    prevArrow:"",
-    nextArrow:"",
-    prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"><i class="glyphicon glyphicon-chevron-left"></i></button>',
-    nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"><i class="glyphicon glyphicon-chevron-left"></i></button>',
+    prevArrow: false,
+    nextArrow: false,
     event: {
         beforeChange: function (event, slick, currentSlide, nextSlide) {
         },
@@ -94,4 +94,5 @@ app.config(['slickCarouselConfig', function (slickCarouselConfig) {
         value: "110"
     }]
 };
+
 });
