@@ -29,6 +29,14 @@ app.config(['slickCarouselConfig', function (slickCarouselConfig) {
        console.log('Error in chartData: ' + data); 
     });
 
+    //Fetch articleThumbnails
+    $http.get( "/articleThumbnails").success(function( data ) {
+          $scope.articleThumbnails = data;
+          console.log(data); 
+    }).error(function(data){
+       console.log('Error in articleThumbnails: ' + data); 
+    });
+
     $scope.number = [
                     {img: "crib-1.jpg", text:"TEXT 1"},
                     {img: "crib-2.jpg", text:"TEXT 3"},

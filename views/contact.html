@@ -1,23 +1,37 @@
 <!DOCTYPE html>
-<html ng-app="mySchoolApp">
+<html ng-app="interiorDesign">
 
   <head>
-    <title>My School Site</title>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/lib/jquery-2.1.4.min.js"></script>
+    <script src="scripts/lib/angular.js"></script>
+    <script src="scripts/slick/slick.min.js"></script>
     <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
     <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
     <script src="bower_components/angular-slick-carousel/dist/angular-slick.min.js"></script>
-    <script src="javascripts/app.js" type="text/javascript"></script>
-    <script src="javascripts/angular-fusioncharts.js" type="text/javascript"></script>
-    <script src="javascripts/angular-fusioncharts.min.js" type="text/javascript"></script>
+    <script src="scripts/app.js" type="text/javascript"></script>
+    <script src="scripts/lib/angular-fusioncharts.js" type="text/javascript"></script>
+    <script src="scripts/lib/angular-fusioncharts.min.js" type="text/javascript"></script>
   </head>
 
-  <body ng-controller="mySchoolController">
-    <div class="navcont" id="header_menu" ng-include="'/header'"><!-- HEADER MENU--></div>
+  <body ng-controller="ID_Controller">
+    <section class="color-1">
+        <nav class="cl-effect-1">
+            <div class="media-wrap" style="float: left;margin-top: -8px;">
+            <img src="images/footer_logo.png" ng-href='#/' alt="Footer Logo" style="float: left;height: 28px;width: 100px;">
+          </div>
+          <a href="/gallery">Gallery</a>
+          <a href="#">What We Do</a>
+          <a href="/about-us">About Us</a>
+          <a href="/contact-us">Contact Us</a>
+          <a href="/articles">Articles</a>
+          <a href="#">Tips/Tricks</a>
+          <a href="#">Login/Sign Up</a>
+        </nav>
+      </section>
       <section>
         <div class="container widget wel-service-1-widget" id="contact_form">
 
@@ -97,6 +111,7 @@
         </div>
         
       </section>
+      <section class="footer-menu" id="" ng-include="'/footer'" style="background-image: url('images/footer-background.jpg');"></section>
 </body>
 
 

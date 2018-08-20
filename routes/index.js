@@ -1,6 +1,9 @@
 //This file is used for fetching data from backend
 
 var express = require('express');
+var mysql = require('mysql');
+var mongo = require('mongodb');
+var MongoClient = require('mongodb').MongoClient;
 var router = express.Router();
 var path = require("path");
 /* GET home page. */
@@ -42,6 +45,60 @@ router.get('/gallery', function(req, res, next) {
 router.get('/footer', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../', 'views', 'footer-menu.html'));
 });
+
+router.get('/articles', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '../', 'views', 'articles.html'));
+});
+
+
+// var con = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "srisri56",
+//   database:"my_data"
+// });
+
+// con.connect(function(err) {
+//   if (err) throw err;
+//   con.query("SELECT * FROM users", function (err, result, fields) {
+//     if (err) throw err;
+//     console.log(result);
+//   });
+// });
+
+
+
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("unity");
+//   dbo.collection("fields_current.node").findOne({}, function(err, result) {
+//     if (err) throw err;
+//     console.log(result);
+//     db.close();
+//   });
+// });
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("interiorDesign");
+//   dbo.createCollection("articles", function(err, res) {
+//     if (err) throw err;
+//     console.log("Collection created!");
+//     db.close();
+//   });
+// });
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("interiorDesign");
+//   var myobj = { title: "First Articles", description: "klsflsdhfsdlfhldkfhlf lsjlfisdfl ljsdflkslfjs klsdhfhklsf lksdfklsdfls lksddflksdflk", thumbnail:"img-1.jpg", titleImage:"imgl-1.jpg" };
+//   dbo.collection("articles").insertOne(myobj, function(err, res) {
+//     if (err) throw err;
+//     console.log("1 document inserted");
+//     db.close();
+//   });
+// });
 
 router.get('/data', function(req,res){
 	res.json([{"id": 1, "name": "Mymm", "city": "Pantano do Sul"},
@@ -107,6 +164,23 @@ router.get('/chartData', function(req,res){
       { label: "2018", value: "110" }
       ]
   })
+});
+
+router.get('/articleThumbnails', function(req,res){
+    var url = "mongodb://localhost:27017/";
+    var jsonResult = "";
+    MongoClient.connect(url, function(err, db) {
+      if (err) throw err;
+      var dbo = db.db("interiorDesign");
+      dbo.collection("articles").findOne({}, function(err, thumbNails) {
+        console.log(thumbNails);
+        res.json({
+            thumbNails
+        })
+        db.close();
+      });
+    });
+    
 });
 
 module.exports = router;

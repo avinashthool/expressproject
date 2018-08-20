@@ -18,42 +18,21 @@
   </head>
 
   <body ng-controller="ID_Controller">
-      <!-- <div id="preloader" style="background: #17181a url('images/ajax-loader.gif') no-repeat center center;
-    background-size: 55px, 55px;
-    "></div> -->
- <!-- <div class="navcont" id="header_menu" ng-include="'/header'"> --><!-- HEADER MENU</div> -->
-      <nav id="header_menu_new" class="navbar navbar-custom navbar-fixed-top" role="navigation">
-          <div class="container">
-              <div class="navbar-header page-scroll">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                      <i class="fa fa-bars"></i>
-                  </button>
-                  <a class="navbar-brand" href="index.html">
-                      <h1>SQUAD FREE</h1>
-                  </a>
-              </div>
-
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#intro">Home</a></li>
-          <li><a href="#about">About</a></li>
-      <li><a href="#service">Service</a></li>
-      <li><a href="#contact">Contact</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Example menu</a></li>
-              <li><a href="#">Example menu</a></li>
-              <li><a href="#">Example menu</a></li>
-            </ul>
-          </li>
-        </ul>
-              </div>
-              <!-- /.navbar-collapse -->
+      <section class="color-1">
+        <nav class="cl-effect-1">
+          <div class="media-wrap" style="float: left;margin-top: -8px;">
+            <img src="images/footer_logo.png" ng-href='#/' alt="Footer Logo" style="float: left;height: 28px;width: 100px;">
           </div>
-          <!-- /.container -->
-      </nav>
+          <a href="/gallery">Gallery</a>
+          <a href="#">What We Do</a>
+          <a href="/about-us">About Us</a>
+          <a href="/contact-us">Contact Us</a>
+          <a href="/articles">Articles</a>
+          <a href="#">Tips/Tricks</a>
+          <a href="#">Login/Sign Up</a>
+        </nav>
+      </section>
+      <section style="margin-top: 0px !important;">
       <div class="container" style="width: 100% !important;padding: 0px !important;">
         <slick ng-if="numberLoaded" settings="slickConfig">
           <div ng-repeat="i in largeSlickImg">
@@ -91,7 +70,7 @@
           </div>
         </slick>
       </div>
-
+</section>
 <section class="wel-area wel-area-15" style="margin-top: 90px;">
 
 <div class="container">
@@ -106,39 +85,130 @@
           <span></span>
           <h2>Gallery</h2>
         </div>
+
         <!-- widget-title -->
 
         <div class="widget-content">
 
           <div class="row">
-
-            <div class="col-sm-4" ng-repeat="gal in gallery">
-              <div class="thumbnail" >
-                <img ng-src="images/{{ gal.img }}" alt="IMAGE">
-                <div class="caption">
-                  <h3>{{gal.text}}</h3>
-                  <p>ullamco laboris nisi ut aliquip ex ea ullamco laboris nisi ut aliquip ex ea ullamco laboris nisi ut aliquip ex ea </p>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="images/282*179/img-4.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Status</h2>
+                        <a class="info" href="/gallery">Explore</a>
+                    </div>
                 </div>
-                <button class="btn btn-primary center-block">Explore</button>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="images/282*179/img-3.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Meetings</h2>
+                        <a class="info" href="/gallery">Explore</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="images/282*179/img-2.jpeg" alt="">
+                    <div class="overlay">
+                        <h2>Living</h2>
+                        <a class="info" href="/gallery">Explore</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <div class="hovereffect">
+                <img class="img-responsive" src="images/282*179/img-1.jpg" alt="">
+                <div class="overlay">
+                    <h2>Drawing</h2>
+                    <a class="info" href="#">Explore</a>
+                </div>
               </div>
             </div>
           </div>
           <!-- row -->
-
-        </div>
-        <!-- widget-content -->
-
       </div>
-      <!-- widget -->
-
+        <!-- widget-content -->
     </div>
-    <!-- col-md-12 -->
-
+      <!-- widget -->
   </div>
+    <!-- col-md-12 -->
+</div>
   <!-- row -->
-
 </div>
 <!-- container -->
+</section>
+
+<section class="wel-area wel-area-15" style="margin-top: 90px;">
+
+  <div class="container" id="best_feature">
+
+    <div class="row">
+
+      <div class="col-md-12 col-sm-12 col-xs-12">
+
+        <div class="widget wel-service-1-widget">
+
+          <div class="widget-title widget-title-s5 text-center">
+            <span></span>
+            <h2>ARTICLES</h2>
+            <p>
+              Our detailed articles on home decore
+            </p>
+          </div>
+          <!-- widget-title -->
+
+          <div class="widget-content">
+
+            <div class="row">
+              <div class="col-md-4 center-block">
+                <div class="section-box-nine">
+                    <!---->
+                    <figure>
+                        <h3>Bed Room</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</p>
+                        <a href="#" class="btn btn-read">Learn More</a>
+                    </figure>
+                    <img src="images/588*331/img-1.jpg" class="img-responsive"/>
+                </div>
+            </div>
+
+            <div class="col-md-4 center-block">
+                <div class="section-box-nine">
+                    <!---->
+                    <figure>
+                        <h3>Drawing</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</p>
+                        <a href="#" class="btn btn-read">Learn More</a>
+                    </figure>
+                    <img src="images/588*331/img-2.jpg" class="img-responsive"/>
+                </div>
+            </div>
+
+            <div class="col-md-4 center-block">
+                <div class="section-box-nine">
+                    <!---->
+                    <figure>
+                        <h3>Kitchen</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</p>
+                        <a href="/article" class="btn btn-read" style="cursor: pointer;">Learn More</a>
+                    </figure>
+                    <img src="images/588*331/img-3.jpg" class="img-responsive"/>
+                </div>
+            </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
       
@@ -258,9 +328,9 @@
   <!-- container -->
 </section>
 
-<section class="footer-menu" id="" ng-include="'/footer'" style="background-image: url('images/footer-background.jpg');">
-  
-</section>
+
+
+<section class="footer-menu" id="" ng-include="'/footer'" style="background-image: url('images/footer-background.jpg');"></section>
 </body>
 
 
