@@ -172,7 +172,7 @@ router.get('/articleThumbnails', function(req,res){
     MongoClient.connect(url, function(err, db) {
       if (err) throw err;
       var dbo = db.db("interiorDesign");
-      dbo.collection("articles").findOne({}, function(err, thumbNails) {
+      dbo.collection("articles").find({}).toArray(function(err, thumbNails) {
         console.log(thumbNails);
         res.json({
             thumbNails
