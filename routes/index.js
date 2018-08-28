@@ -21,7 +21,7 @@ router.get('/contact-us', function(req, res, next) {
 });
 
 router.get('/about-us', function(req, res, next) {
-  res.sendFile(path.join(__dirname, '../', 'views', 'about.html'));
+  res.sendFile(path.join(__dirname, '../', 'views', 'abt.html'));
 });
 
 
