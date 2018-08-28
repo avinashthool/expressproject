@@ -31,8 +31,8 @@ app.config(['slickCarouselConfig', function (slickCarouselConfig) {
 
     //Fetch articleThumbnails
     $http.get( "/articleThumbnails").success(function( data ) {
-          $scope.articleThumbnails = data;
-          console.log(data); 
+          $scope.articleThumbnails =  data.thumbNails;
+          console.log(data.thumbNails); 
     }).error(function(data){
        console.log('Error in articleThumbnails: ' + data); 
     });
@@ -74,33 +74,19 @@ app.config(['slickCarouselConfig', function (slickCarouselConfig) {
     }
 };
 
-	$scope.myDataSource = {
-    chart: {
-        caption: "Project Handled",
-        subCaption: "Total creation in last few years",
-        numberPrefix: "",
-        theme: "ocean"
-    },
-    data:[{
-        label: "2014",
-        value: "80"
-    },
-    {
-        label: "2015",
-        value: "90"
-    },
-    {
-        label: "2016",
-        value: "90"
-    },
-    {
-        label: "2017",
-        value: "95"
-    },
-    {
-        label: "2018",
-        value: "110"
-    }]
+
+$scope.articleSlickSlider = {
+    enabled: true,
+    dots:true,
+    fade: true,
+    speed: 1000,
+    autoplay: true,
+    draggable: false,
+    autoplaySpeed: 1000,
+    arrows: true,
+    method: {},
+    prevArrow: true,
+    nextArrow: true
 };
 
 });
