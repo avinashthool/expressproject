@@ -18,21 +18,8 @@
   </head>
 
   <body ng-controller="ID_Controller">
-    <section class="color-1">
-        <nav class="cl-effect-1">
-          <div class="media-wrap" style="float: left;margin-top: -8px;">
-            <img src="images/footer_logo.png" ng-href='#/' alt="Footer Logo" style="float: left;height: 28px;width: 100px;">
-          </div>
-          <a href="/gallery">Gallery</a>
-          <a href="#">What We Do</a>
-          <a href="/about-us">About Us</a>
-          <a href="/contact-us">Contact Us</a>
-          <a href="/articles">Articles</a>
-          <a href="#">Tips/Tricks</a>
-          <a href="#">Login/Sign Up</a>
-        </nav>
-    </section>
-    <section class="mainContent">
+      <header id="home" ng-include="'/header'"></header>
+      <section class="mainContent">
       
       <div class="container about-us">
 
@@ -124,7 +111,7 @@
       </div>
     </section>
     <section class="mainContent">
-        <div id="about-bg">
+        <div id="client">
   
           <div class="container">
             <div class="row">
@@ -135,27 +122,27 @@
                 </div>
       
                 <div class="col-sm-4 col-md-2">
-                    <span></span><img src="images//client1.png" alt="Logo">
+                    <span class="clientSpan"></span><img src="images//client1.png" alt="Logo">
                   </div>
           
                   <div class="col-sm-4 col-md-2">
-                    <span></span><img src="images//client2.png" alt="Logo">
+                    <span class="clientSpan"></span><img src="images//client2.png" alt="Logo">
                   </div>
           
                   <div class="col-sm-4 col-md-2">
-                    <span></span><img src="images//client3.png" alt="Logo">
+                    <span class="clientSpan"></span><img src="images//client3.png" alt="Logo">
                   </div>
           
                   <div class="col-sm-4 col-md-2">
-                    <span></span><img src="images//client4.png" alt="Logo">
+                    <span class="clientSpan"></span><img src="images//client4.png" alt="Logo">
                   </div>
           
                   <div class="col-sm-4 col-md-2">
-                    <span></span><img src="images//client5.png" alt="Logo">
+                    <span class="clientSpan"></span><img src="images//client5.png" alt="Logo">
                   </div>
           
                   <div class="col-sm-4 col-md-2">
-                    <span></span><img src="images//client6.png" alt="Logo">
+                    <span class="clientSpan"></span><img src="images//client6.png" alt="Logo">
                   </div>
       
             </div>
